@@ -7,6 +7,7 @@ const PostHeader = props => {
 
   return (
     <div className='post-header'>
+      {/* {console.log(props)} */}
       <div className='post-thumb-wrapper'>
         <img
           alt='post header'
@@ -20,4 +21,3 @@ const PostHeader = props => {
 };
 
 export default PostHeader;
- 

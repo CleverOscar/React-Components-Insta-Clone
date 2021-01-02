@@ -7,12 +7,18 @@ const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
   const { post, likePost } = props;
 
+  
+
   return (
     <div className='post-border'>
+      {/* post header */
+      /* console.log('Post Component ',props.post)*/}
       <PostHeader
         username={post.username}
         thumbnailUrl={post.thumbnailUrl}
       />
+
+      {/* Image Wrapper */}
       <div className='post-image-wrapper'>
         <img
           alt='post thumbnail'
@@ -20,6 +26,8 @@ const Post = props => {
           src={post.imageUrl}
         />
       </div>
+
+      
       {/* Is LikeSection getting all the props it needs to work correctly? */}
       <LikeSection likePost={() => likePost(post.id)} />
       {/* Comments also wants its props! */}
@@ -29,4 +37,3 @@ const Post = props => {
 };
 
 export default Post;
- 
