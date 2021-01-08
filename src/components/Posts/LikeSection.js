@@ -1,5 +1,3 @@
-// Look at the number of likes on line 26. Right now it's hard coded to '100'.
-// Use a piece of data coming in through props to display the correct number of likes.
 // You will also add an onClick handler that utilizes `likePost` to increase the count of likes.
 // (As a stretch goal, you might want to prevent your user from "liking" the same post more than once.)
 import React from 'react';
@@ -23,9 +21,10 @@ const LikeSection = props => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className='like-number'>100 likes</p>
+      <p className='like-number'>{props.post.likes}</p>
     </div>
   );
 };
 
 export default LikeSection;
+ 
