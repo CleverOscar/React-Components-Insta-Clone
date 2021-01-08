@@ -5,15 +5,14 @@ import './Posts.css';
 const Posts = (props) => {
   const { likePost, posts } = props;
   
+
   return (
     <div className='posts-container-wrapper'>
-      {/* Map through the posts array returning a Post component at each iteration */
+      {
       posts.map(post => 
-        <div>
-          <Post post={post}/>
-        </div>)
+           <Post key={post.id} post={post} />
+        )
       }
-      {/* Check the implementation of Post to see what props it requires! */}
     </div>
   );
 };
